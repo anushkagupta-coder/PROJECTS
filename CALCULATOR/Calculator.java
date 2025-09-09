@@ -48,7 +48,17 @@ public class Calculator implements ActionListener {
         functionButtons[7]=clrButtons;
         functionButtons[8]=negButtons;
 
-        for()
+        for(int i=0;i<9;i++){
+            functionButtons[i].addActionListener(this);
+            functionButtons[i].setfont(myFont);
+            functionButtons[i].setFocusable(false);
+        }
+
+        negButton.setBounds(50,430,100,50);
+        delButton.setBounds(150,430,100,50);
+        clrButton.setBounds(250,430,100,50);
+
+        panel
 
 
     }
