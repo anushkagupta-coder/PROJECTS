@@ -1,8 +1,8 @@
 
 //I AM MAKING A CALCULATOR USING JAVA GUI;
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import javax.swing.*;
 
 public class Calculator implements ActionListener {
     JFrame frame;
@@ -93,7 +93,7 @@ public class Calculator implements ActionListener {
     public void actionPerformed(ActionEvent e){
           for (int i = 0; i < 10; i++) {
               if(e.getSource()== numberButtons[i]){
-                textfield.setText(textfield.getText().concat(String));
+                textfield.setText(textfield.getText().concat(String.valueOf(i)));
               }
           }
           for (int i = 0; i < 10; i++) {
