@@ -92,7 +92,7 @@ public class Calculator implements ActionListener {
     public void actionPerformed(ActionEvent e){
           for (int i = 0; i < 10; i++) {
               if(e.getSource()== numberButtons[i]){
-                textfield.setText(textfield.getText().concat(tring));
+                textfield.setText(textfield.getText().concat(String));
               }
           }
           for (int i = 0; i < 10; i++) {
@@ -151,7 +151,7 @@ public class Calculator implements ActionListener {
             String string=textfield.getText();
             textfield.setText("");
             for (int i = 0; i < string.length()-1; i++) {
-                textfield.settext(textfield.getText()+string.charAt(i));
+                textfield.setText(textfield.getText()+string.charAt(i));
             }
           }
     }
