@@ -50,7 +50,7 @@ public class Calculator implements ActionListener {
 
         for(int i=0;i<9;i++){
             functionButtons[i].addActionListener(this);
-            functionButtons[i].setfont(myFont);
+            functionButtons[i].setFont(myFont);
             functionButtons[i].setFocusable(false);
         }
 
