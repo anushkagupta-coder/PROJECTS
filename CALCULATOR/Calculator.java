@@ -148,7 +148,7 @@ public class Calculator implements ActionListener {
 
           }
           if(e.getSource()==delButton){
-            String string=textfiled.getText();
+            String string=textfield.getText();
             textfield.setText("");
             for (int i = 0; i < string.length()-1; i++) {
                 textfield.settext(textfield.gettext()+string.charAt(i));
