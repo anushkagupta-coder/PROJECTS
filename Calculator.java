@@ -92,12 +92,13 @@ public class Calculator implements ActionListener {
         frame.setVisible(true);
     }
     public static void main(String[] args){
-        Calculator calc=new Calculator();
+        SwingUtilities.invokeLater(() -> new Calculator());
 
     }
+    @Override
     public void actionPerformed(ActionEvent e){
           for (int i = 0; i < 10; i++) {
-              if(e.getSource()== numberButtons[i]){
+              if(e.getSource()== functionButtons[i]){
                 textfield.setText(textfield.getText().concat(String.valueOf(i)));
               }
           }
@@ -130,7 +131,7 @@ public class Calculator implements ActionListener {
             textfield.setText("");
           }
           if(e.getSource()==equButton){
-            num1=Double.parseDouble (textfield.getText());
+            num2=Double.parseDouble (textfield.getText());
             
             switch(operator){
                 case'+':
