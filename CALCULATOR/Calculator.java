@@ -86,13 +86,13 @@ public class Calculator implements ActionListener {
         frame.setVisible(true);
     }
     public static void main(String[] args){
-        Calculatorcalc=new Calculator();
+        Calculator calc=new Calculator();
 
     }
     public void actionPerformed(ActionEvent e){
           for (int i = 0; i < 10; i++) {
               if(e.getSource()== numberButtons[i]){
-                textfield.setText(textfield.getText().concat(string));
+                textfield.setText(textfield.getText().concat(tring));
               }
           }
           for (int i = 0; i < 10; i++) {
