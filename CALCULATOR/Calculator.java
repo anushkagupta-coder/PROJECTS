@@ -151,7 +151,7 @@ public class Calculator implements ActionListener {
             String string=textfield.getText();
             textfield.setText("");
             for (int i = 0; i < string.length()-1; i++) {
-                textfield.settext(textfield.gettext()+string.charAt(i));
+                textfield.settext(textfield.getText()+string.charAt(i));
             }
           }
     }
