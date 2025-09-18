@@ -26,8 +26,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={inter.className} >
-          <sidebar></>
-        {children}
+          <GlobalStyleProvider>
+            <sidebar></>
+            {children}
+          </GlobalStyleProvider>
+          
       </body>
     </html>
   );

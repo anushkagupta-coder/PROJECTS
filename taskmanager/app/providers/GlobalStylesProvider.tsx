@@ -6,6 +6,12 @@ interface Props{
 
 }
 function GlobalStyleProvider({children }:Props){
-    return <>{children}</>
+    return <GlobalStyles>{children}</GlobalStyles>;
 }
+
+const GlobalStyles=Styled.div``
+    padding:2.5rem;
+    display:flex;
+    gap:2.5rem ;
+    height:100%;
 export default GlobalStyleProvider
