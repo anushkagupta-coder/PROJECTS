@@ -27,7 +27,7 @@ export default function RootLayout({
       <body
         className={inter.className} >
           <GlobalStyleProvider>
-            <sidebar></>
+            <sidebar />
             {children}
           </GlobalStyleProvider>
           
