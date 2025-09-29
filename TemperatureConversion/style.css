@@ -5,7 +5,8 @@ body{
 }
 h1{
     color:rgb(182, 18, 124);
-    font-size: 30px;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
     
 }
 form{
