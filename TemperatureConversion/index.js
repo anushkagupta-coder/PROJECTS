@@ -9,6 +9,7 @@ let temp;
 
 function convert(){
     if(toFahrenheit.checked){
+        
         result.textContent="You selected to Fahrenheit";
     }
     else if(toCelsius.checked){

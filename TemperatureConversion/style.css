@@ -4,7 +4,7 @@ body{
 
 }
 h1{
-    color:rgb(34, 47, 231);
+    color:rgb(182, 18, 124);
     
 }
 form{
@@ -16,11 +16,11 @@ form{
     border-radius: 10px;
     box-shadow: 5px 5px 15px rgb(224, 86, 86);
 }
-#textbox{
+#textBox{
     width: 50%;
     text-align: center;
-    font-size: 2em;
-    border: 2px solid black ;
+    font-size: 60px;
+    border: 5px solid black ;
     margin-bottom: 15px;
 
 
