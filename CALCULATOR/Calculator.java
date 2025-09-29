@@ -1,4 +1,4 @@
-package CALCULATOR;
+//package CALCULATOR;
 //I AM MAKING A CALCULATOR USING JAVA GUI;
 import java.awt.*;
 import java.awt.event.*;
