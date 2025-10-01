@@ -1,8 +1,8 @@
 
 function rollDice() {
-    const numOfDice=document.getElementById("numOfValue").value;
+    const numOfDice=document.getElementById("numOfDice").value;
     const diceResult=document.getElementById("diceResult");
-    const diceImages=document.getElementById("diceImage");
+    const diceImages=document.getElementById("diceImages");
     const values=[];
     const images=[];
 
