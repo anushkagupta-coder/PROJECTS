@@ -21,4 +21,8 @@ button:hover{
 button:active{
     background-color: brgb(97, 97, 208)
 }
-
+input{
+    font-size: 2rem;
+    width: 150px;
+    text-align: center;
+}
