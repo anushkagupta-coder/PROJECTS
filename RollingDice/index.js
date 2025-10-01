@@ -8,6 +8,6 @@ function rollDice() {
 
     for(let i=0;i<numOfDice;i++){
         const value=Math.floor(Math.random()*6)+1;
-        
+        values.push(value);
     }
 }
