@@ -30,7 +30,8 @@ input{
 #diceResult{
     margin: 25px;
 }
-#diceImages{
+#diceImages img{
     width: 150px;
     margin: 5px;
+   text-align: center;
 }
