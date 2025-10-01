@@ -27,3 +27,9 @@ input{
     text-align: center;
 }
 
+#diceResult{
+    margin: 25px;
+}
+#diceImages{
+    width: 150px;
+}
