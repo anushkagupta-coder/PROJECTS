@@ -48,11 +48,12 @@ function signup(){
                     <button types="submit" className="btn btn-success w-100 rounded-0">
                         Register
                     </button>
+                    </form>
                     <p>Alerady ahve an account</p>
                     <button className="btn tbn-default border w-100 bg-light rounded-0 text-decoration-none">
                         login
                     </button>
-                </form>
+                
 
             </div>
 
