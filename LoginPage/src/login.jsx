@@ -7,4 +7,4 @@ function Login(){
         </div>
     )
 }
-export default login
+export default login()
