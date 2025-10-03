@@ -18,10 +18,11 @@
   },
   "homepage": "https://github.com/anushkagupta-coder/PROJECTS#readme",
   "dependencies": {
+    "axios": "^1.12.2",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "mongoose": "^8.19.0",
-    "nodemon": "^3.1.10"
-  },
-  "devDependencies": {}
+    "nodemon": "^3.1.10",
+    "react-router-dom": "^7.9.3"
+  }
 }
