@@ -2,33 +2,51 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Auth = () => {
+  const [isLogin, setIsLogin] = useState(true); // true = Login, false = Signup
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const res = await axios.post("http://localhost:5000/api/users/login", {
-        email,
-        password,
-      });
 
+    try {
+      const url = isLogin
+        ? "http://localhost:5000/api/users/login"
+        : "http://localhost:5000/api/users/signup";
+
+      const body = isLogin ? { email, password } : { name, email, password };
+
+      const res = await axios.post(url, body);
       localStorage.setItem("token", res.data.token);
-      alert("Login Successful!");
-      navigate("/dashboard"); // redirect after login
+      alert(isLogin ? "Login successful!" : "Signup successful!");
+      navigate("/dashboard"); // redirect after login/signup
     } catch (err) {
-      setError(err.response?.data?.message || "Login failed");
+      setError(err.response?.data?.message || "Action failed");
     }
   };
 
   return (
-    <div className="login-container" style={{ textAlign: "center", marginTop: "80px" }}>
-      <h2>Login</h2>
-      <form onSubmit={handleLogin} style={{ display: "inline-block", textAlign: "left" }}>
-        <div>
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h2>{isLogin ? "Login" : "Signup"}</h2>
+      <form onSubmit={handleSubmit} style={{ display: "inline-block", textAlign: "left" }}>
+        {!isLogin && (
+          <div>
+            <label>Name:</label>
+            <input
+              type="text"
+              placeholder="Enter name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+          </div>
+        )}
+
+        <div style={{ marginTop: "10px" }}>
           <label>Email:</label>
           <input
             type="email"
@@ -53,11 +71,24 @@ const Login = () => {
         {error && <p style={{ color: "red" }}>{error}</p>}
 
         <button type="submit" style={{ marginTop: "15px" }}>
-          Login
+          {isLogin ? "Login" : "Signup"}
         </button>
       </form>
+
+      <p style={{ marginTop: "10px" }}>
+        {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
+        <button
+          onClick={() => {
+            setIsLogin(!isLogin);
+            setError(""); // clear errors when toggling
+          }}
+          style={{ color: "blue", background: "none", border: "none", cursor: "pointer" }}
+        >
+          {isLogin ? "Signup" : "Login"}
+        </button>
+      </p>
     </div>
   );
 };
 
-export default Login;
+export default Auth;
