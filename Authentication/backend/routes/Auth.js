@@ -1,10 +1,10 @@
 import express from "express";
 import mongoose from "mongoose";
-import UserModels from "../models/UserModels";
-import bcrypt from "bcryptjs";
+import User from "../models/UserModels.js";
+import bcrypt from "bcryptjs"
 import jwt from "jsonwebtoken";
 
-const router=express.Router
+const router=express.Router();
 
 //Signup
 router.post("/signup", async (req, res) => {
@@ -14,7 +14,7 @@ router.post("/signup", async (req, res) => {
         const hashedPassword=await bcrypt.hash(password, 10);
 
         //create  anew user
-        const user=new UserModels({name,email,password:hashedPassword});
+        const user=new User({name,email,password:hashedPassword});
         await user.save();
         res.status(201).json({message:"user created succesfully"});
 
@@ -26,12 +26,12 @@ router.post("/signup", async (req, res) => {
 
 //login
 
-router.post("\login",async(req,res)=>{
+router.post("/login",async(req,res)=>{
     try {
         const{email,password}=req.body;
 
         //find suer by email
-        const user=await UserModels.findOne({email});
+        const user=await User.findOne({email});
         if(!user) return res.status(404).json({error:"user not found"});
 
         //compare password

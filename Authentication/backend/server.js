@@ -1,5 +1,5 @@
 import express from "express";
-import { JsonWebTokenError } from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
 import dotenv, { configDotenv } from "dotenv";
 import cors from "cors";
